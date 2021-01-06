@@ -1,0 +1,16 @@
+<h1>Search: <small> {{parametro}}</small> </h1>
+
+<div class="row" *ngIf="pokemons.length==0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existen resultados con el termino: {{parametro}};
+        </div>
+    </div>
+</div>
+
+
+<div class="card-columns">
+
+    <app-pokemon-card [pokemon]="pokemon" *ngFor="let pokemon of pokemons"></app-pokemon-card>
+
+</div>

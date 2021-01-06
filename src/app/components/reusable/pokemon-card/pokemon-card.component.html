@@ -1,0 +1,10 @@
+<div class="card">
+    <img src="assets/img/{{pokemon.img}}" class="card-img-top" alt="{{pokemon.nombre}}">
+    <div class="card-body">
+        <h5 class="card-title">{{pokemon.nombre}}</h5>
+        <p class="card-text">Tipo: {{pokemon.tipo}} </p>
+        <p class="card-text">Numero Pokedex: {{pokemon.numPokedex}}</p>
+        <button (click)="verPokemon(pokemon.id)" type="button" class="btn btn-outline-primary btn-block">Ver mas</button>
+        <a [routerLink]="['/pokemon',pokemon.id]" class="btn btn-outline-primary">Ver mas</a>
+    </div>
+</div>

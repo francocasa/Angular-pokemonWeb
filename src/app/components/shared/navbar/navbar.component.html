@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0e0327f6;">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <a class="navbar-brand" [routerLink]="['home']">
+        <img src="assets/img/pokeball.png" alt="" width="45" height="45">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['home']" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['pokemons']" routerLinkActive="active">Pokemons</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['about']" routerLinkActive="active">About</a>
+            </li>
+        </ul>
+
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search Pokemon" (keypress)="searchPokemon(searchPok.value, $event)" #searchPok>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="searchPokemon(searchPok.value, $event)">Search Pokemon</button>
+        </div>
+
+    </div>
+</nav>
